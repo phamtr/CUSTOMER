@@ -1,13 +1,13 @@
 <form>
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
-    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple (change)="handfileinput($event.target.files)">
   </div>
   <div class="preview">
     <p>No files currently selected for upload</p>
   </div>
   <div>
-    <img src= "file.filename" alt="">
+    <img [src]= "imageurl" alt=""  type="width:250px;height:200px">
   </div>
   <div>
     <button>Submit</button>
