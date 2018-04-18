@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { ApiService } from './api.service';
 
 
 const routes: Routes = [
+  { path: 'login',
+    component: LoginComponent
+  },
   {
     path: 'customers',
     loadChildren: 'app/customers/customers.module#CustomersModule'
@@ -13,6 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'products',
+    canActivate: [ApiService],
     loadChildren: 'app/products/products.module#ProductsModule'
   },
   {
