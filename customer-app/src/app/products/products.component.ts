@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  imageurl:String='';
+  fileToUpload;
+    constructor() { }
+  
+    ngOnInit() {
+        }
+        handfileinput(file:FileList){
+          this.fileToUpload=file.item(0);
+          var reader=new FileReader();
+          reader.onload=(event: any)=>{
+            this.imageurl= event.target.result;
+          }
+          reader.readAsDataURL(this.fileToUpload);
+        }
 
 }

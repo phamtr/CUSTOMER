@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ApiService } from './api.service';
-
+import { NotfoundComponent } from './notfound/notfound.component'
 
 const routes: Routes = [
   { path: 'login',
@@ -25,6 +25,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotfoundComponent
   }
 ];
 
