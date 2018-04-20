@@ -10,6 +10,7 @@ import { ApiService } from './api.service';
 import { AdminService } from './admin.service';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductService } from './products/product.service';
+import {Location, CommonModule} from '@angular/common';
 
 
 @NgModule({
@@ -24,9 +25,10 @@ import { ProductService } from './products/product.service';
     HttpModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
-  providers: [ApiService, AdminService, ProductService],
+  providers: [ApiService, AdminService, ProductService, Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
