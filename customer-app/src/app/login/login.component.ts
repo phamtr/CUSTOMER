@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
    this.productService.LoginCompany(user.email, user.password)
     .subscribe(data => { console.log(data),
       this.service.logInAdmin();
-      // this.router.navigate(['/dashboard']);
+      this.router.navigate(['/products']);
     })
     
     

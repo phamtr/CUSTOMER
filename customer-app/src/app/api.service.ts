@@ -13,5 +13,7 @@ export class ApiService implements CanActivate {
   logInAdmin(){
     localStorage.setItem("loggedIn", "true");
   }
-
+  logOutAdmin(){
+    localStorage.clear;
+  }
 }

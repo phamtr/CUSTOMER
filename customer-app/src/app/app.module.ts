@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ApiService } from './api.service';
 import { AdminService } from './admin.service';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ProductService } from './products/product.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [ApiService, AdminService],
+  providers: [ApiService, AdminService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
