@@ -1,0 +1,18 @@
+<div class="list-filter">
+  <appa-product-filters
+    [availableFilters]="filters"
+    [activatedFilters]="activeFilters"
+    (activeFilters)="updateActivatedFilters($event)"
+  ></appa-product-filters>
+</div>
+<div class="list-products">
+  <div class="list-product" *ngFor="let item of itemsAfterFilter()">
+    <appa-product
+      [id]="item.id"
+      [name]="item.name"
+      [price]="item.price"
+      [currency]="item.currency">
+    </appa-product>
+  </div>
+</div>
+

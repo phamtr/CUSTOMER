@@ -13,11 +13,12 @@ import { ProductService } from './products/product.service';
 import {Location, CommonModule} from '@angular/common';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

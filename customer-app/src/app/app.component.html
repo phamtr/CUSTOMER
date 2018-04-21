@@ -2,7 +2,8 @@
   {{title}}
 </h1>
 <div class="nav-bar">
-  <a *ngIf="location.path() !== ''" routerLink="/" class="back-button">Back</a>
+  <a *ngIf="location.path() !== ''" routerLink="/" class="back-button">Home</a>
+  <a *ngIf="location.path() === '/orders'" routerLink="/orders/product-orders" class="back-button">Product-orders</a>
   <div *ngIf="location.path() === ''">
 <button routerLink="">Home</button>
 <button routerLink="/customers">Customers</button>
